@@ -5,7 +5,6 @@ services:
     image: danlynn/ember-cli:latest
     volumes:
       - .:/myapp
-      - .bash_history:/root/.bash_history
       - node_modules:/myapp/node_modules
     tmpfs:
       - /myapp/tmp
