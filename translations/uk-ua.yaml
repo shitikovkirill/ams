@@ -1,2 +1,9 @@
-hello:
-  world: "asdasdsa"
+locale:
+  language: "Мова"
+  en-us: "Англійська"
+  uk-ua: "Українська"
+header:
+  contact: Контакти
+  call: Телефонуйте нам
+  email: Напишіть нам
+  open: Ми відкриті

@@ -1,2 +1,9 @@
-hello:
-  world: "Bonjour tout le monde!"
+locale:
+  language: "Language"
+  en-us: "English"
+  uk-ua: "Ukranian"
+header:
+  contact: Contact
+  call: Call Us
+  email: Email Us
+  open: We'are Open

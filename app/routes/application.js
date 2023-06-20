@@ -3,8 +3,17 @@ import { service } from '@ember/service';
 
 export default class ApplicationRoute extends Route {
   @service intl;
+  @service('language-detector') languageDetector;
 
   beforeModel() {
-    this.intl.setLocale(['en-us', 'uk-ua']);
+    super.beforeModel(...arguments);
+
+    let language = 'uk-ua';
+    this.intl.locales.forEach((item) => {
+      if (this.languageDetector.isUserLanguage(item)) {
+        language = item;
+      }
+    });
+    this.intl.setLocale(language);
   }
 }

@@ -17,14 +17,13 @@
             </div>
 
             <div class="col-12 col-md-auto">
-                {{t "hello.world"}}
+
                 {{!-- Top Links
                 ============================================= --}}
                 <div class="top-links">
                     <ul class="top-links-container">
                         <Header::LocaleSwitcher/>
-                        <li class="top-links-item"><a href="faqs.html">FAQs</a></li>
-                        <li class="top-links-item"><a href="contact.html">Contact</a></li>
+                        <li class="top-links-item"><a href="contact.html">{{t "header.contact"}}</a></li>
                     </ul>
                 </div>{{!-- .top-links end --}}
 
@@ -40,37 +39,23 @@
     <div class="container">
         <div class="header-row">
 
-            {{!-- Logo
-            ============================================= --}}
-            <div id="logo" class="ml-auto ml-lg-0 mr-lg-auto">
-                <a href="index.html" class="standard-logo"><img src="assets/images/logo.png" alt="Canvas Logo"></a>
-                <a href="index.html" class="retina-logo"><img src="assets/images/logo@2x.png" alt="Canvas Logo"></a>
-            </div>{{!-- #logo end --}}
+            <Header::Logo/>
 
             <div class="header-misc d-none d-lg-flex">
 
                 <ul class="header-extras">
-                    <li>
-                        <i class="i-plain icon-call m-0"></i>
-                        <div class="he-text">
-                            Call Us
-                            <span>(1) 22 54215821</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="i-plain icon-line2-envelope m-0"></i>
-                        <div class="he-text">
-                            Email Us
-                            <span>info@canvas.com</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="i-plain icon-line-clock m-0"></i>
-                        <div class="he-text">
-                            We'are Open
-                            <span>Mon - Sat, 10AM to 6PM</span>
-                        </div>
-                    </li>
+                    <Header::Contact @icon="icon-call">
+                        {{t "header.call"}}
+                        <span>(1) 22 54215821</span>
+                    </Header::Contact>
+                    <Header::Contact @icon="icon-line2-envelope">
+                        {{t "header.email"}}
+                        <span>info@canvas.com</span>
+                    </Header::Contact>
+                    <Header::Contact @icon="icon-line-clock">
+                        {{t "header.open"}}
+                        <span>Mon - Sat, 10AM to 6PM</span>
+                    </Header::Contact>
                 </ul>
 
             </div>
