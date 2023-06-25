@@ -10,8 +10,8 @@ export default class GoToTopComponent extends Component {
     super(...arguments);
     const document = getOwner(this).lookup('service:-document');
     document.addEventListener('scroll', () => {
-      let lastKnownScrollPosition = window.scrollY;
-      let browserWindowHeight = window.innerHeight;
+      const lastKnownScrollPosition = window.scrollY;
+      const browserWindowHeight = window.innerHeight;
 
       if (lastKnownScrollPosition > browserWindowHeight / 3) {
         this.isShown = true;
@@ -23,6 +23,6 @@ export default class GoToTopComponent extends Component {
 
   @action
   scrollToTop() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
