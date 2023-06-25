@@ -1,6 +1,7 @@
 import Component from '@glimmer/component';
 import { getOwner } from '@ember/application';
 import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 
 export default class GoToTopComponent extends Component {
   @tracked isShown = false;
@@ -10,7 +11,7 @@ export default class GoToTopComponent extends Component {
     const document = getOwner(this).lookup('service:-document');
     document.addEventListener('scroll', () => {
       let lastKnownScrollPosition = window.scrollY;
-      let browserWindowHeight = window.outerHeight;
+      let browserWindowHeight = window.innerHeight;
 
       if (lastKnownScrollPosition > browserWindowHeight / 3) {
         this.isShown = true;
@@ -18,5 +19,10 @@ export default class GoToTopComponent extends Component {
         this.isShown = false;
       }
     });
+  }
+
+  @action
+  scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
   }
 }
