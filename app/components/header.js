@@ -1,7 +1,6 @@
 import Component from '@glimmer/component';
 import { getOwner } from '@ember/application';
 import { tracked } from '@glimmer/tracking';
-import { action } from '@ember/object';
 import { service } from '@ember/service';
 import { isSuperset } from '../util/set';
 
@@ -26,10 +25,5 @@ export default class HeaderComponent extends Component {
         this.isSticky = false;
       }
     });
-  }
-
-  @action
-  scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
