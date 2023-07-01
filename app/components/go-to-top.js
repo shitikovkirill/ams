@@ -6,8 +6,8 @@ import { action } from '@ember/object';
 export default class GoToTopComponent extends Component {
   @tracked isShown = false;
 
-  constructor() {
-    super(...arguments);
+  @action
+  addScrollListener() {
     const document = getOwner(this).lookup('service:-document');
     document.addEventListener('scroll', () => {
       const lastKnownScrollPosition = window.scrollY;
