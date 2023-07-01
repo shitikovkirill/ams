@@ -2,6 +2,7 @@ import Component from '@glimmer/component';
 import { getOwner } from '@ember/application';
 import { tracked } from '@glimmer/tracking';
 import { service } from '@ember/service';
+import { action } from '@ember/object';
 import { isSuperset } from '../util/set';
 
 export default class HeaderComponent extends Component {
@@ -10,8 +11,9 @@ export default class HeaderComponent extends Component {
   @tracked isSticky = false;
   @service media;
 
-  constructor() {
-    super(...arguments);
+
+  @action
+  addScrollListener() {
     const document = getOwner(this).lookup('service:-document');
     document.addEventListener('scroll', () => {
       const hasMedia = new Set(this.media.matches);
