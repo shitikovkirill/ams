@@ -23,7 +23,7 @@ export default class GoToTopComponent extends Component {
           this.isShown = false;
         }
       });
-    };
+    }
   }
 
   @action

@@ -1,10 +1,9 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
 
-export default Component.extend({
-    classNames: ['video-wrap'],
-    didInsertElement() {
-        this._super(...arguments);
-        let video = this.element.children[0];
-        video.muted = true;
-    }
-});
+export default class VideoComponent extends Component {
+  @action
+  muteVideo(videoElement) {
+    videoElement.muted = true;
+  }
+}

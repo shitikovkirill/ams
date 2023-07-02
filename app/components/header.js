@@ -12,7 +12,6 @@ export default class HeaderComponent extends Component {
   @service media;
   @service fastboot;
 
-
   @action
   addScrollListener() {
     if (!this.fastboot.isFastBoot) {
