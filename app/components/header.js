@@ -10,22 +10,25 @@ export default class HeaderComponent extends Component {
   desktopMedia = new Set(['device-xl', 'device-lg']);
   @tracked isSticky = false;
   @service media;
+  @service fastboot;
 
 
   @action
   addScrollListener() {
-    const document = getOwner(this).lookup('service:-document');
-    document.addEventListener('scroll', () => {
-      const hasMedia = new Set(this.media.matches);
+    if (!this.fastboot.isFastBoot) {
+      const document = getOwner(this).lookup('service:-document');
+      document.addEventListener('scroll', () => {
+        const hasMedia = new Set(this.media.matches);
 
-      if (
-        isSuperset(this.desktopMedia, hasMedia) &&
-        window.scrollY >= this.topOffsetScroll
-      ) {
-        this.isSticky = true;
-      } else {
-        this.isSticky = false;
-      }
-    });
+        if (
+          isSuperset(this.desktopMedia, hasMedia) &&
+          window.scrollY >= this.topOffsetScroll
+        ) {
+          this.isSticky = true;
+        } else {
+          this.isSticky = false;
+        }
+      });
+    }
   }
 }
