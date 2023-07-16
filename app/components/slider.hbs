@@ -2,7 +2,7 @@
 id="slider"
 class="slider-element slider-parallax swiper_wrapper min-vh-75"
 data-loop="true"
-style="transform: translate3d(0px, {{this.sliderParallaxYPos}}px, 0px);"
+style={{this.sliderParallaxStyles}}
 {{did-insert this.setup}}
 >
     
@@ -22,12 +22,11 @@ style="transform: translate3d(0px, {{this.sliderParallaxYPos}}px, 0px);"
         </swiper.slide>
         <swiper.slide>
             <div class="container">
-                    <div class="slider-caption slider-caption-right">
-                        <div>
+                <Slider::Caption
+                @transformY={{this.captionParallaxYPos}}>
                             <h2>Beautifully Flexible</h2>
                             <p class="d-none d-sm-block">Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Powerful Layout with Responsive functionality that can be adapted to any screen size.</p>
-                        </div>
-                    </div>
+                </Slider::Caption>
                 </div>
                 {{#if this.showVideo}}
                     <Slider::Video/>
@@ -38,14 +37,13 @@ style="transform: translate3d(0px, {{this.sliderParallaxYPos}}px, 0px);"
         </swiper.slide>
         <swiper.slide>
             <div class="container">
-                    <div class="slider-caption">
-                        <div>
+                    <Slider::Caption
+                @transformY={{this.captionParallaxYPos}}>
                             <h2>Premium Constructions</h2>
                             <p class="d-none d-sm-block">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide-bg" style="background-image: url('assets/images/slider/1.jpg'); background-position: center bottom;"></div>
+                    </Slider::Caption>
+            </div>
+            <div class="swiper-slide-bg" style="background-image: url('assets/images/slider/1.jpg'); background-position: center bottom;"></div>
         </swiper.slide>
         <swiper.navigation>
             <div class="slider-arrow-left swiper-button-prev"><i class="icon-angle-left"></i></div>

@@ -3,18 +3,24 @@ import { service } from '@ember/service';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { isSuperset } from '../../util/set';
+import getStyles from '../../util/style';
 
 export default class SliderCaptionComponent extends Component {
   @service media;
   @service('-document') document;
 
   @tracked
+  captionStyle;
   opacity = 1;
 
   @action
   setup() {
     this.slider = this.document.querySelector('.slider-parallax');
-    window.addEventListener('DOMContentLoaded', () => this.fade(this), false);
+    window.addEventListener(
+      'DOMContentLoaded',
+      () => this.prepareStyle(this),
+      false
+    );
   }
 
   isDesktop() {
@@ -23,7 +29,19 @@ export default class SliderCaptionComponent extends Component {
     return isSuperset(desktopMedia, hasMedia);
   }
 
-  fade(component) {
+  prepareStyle(component) {
+    const opacity = component.getOpacity(component);
+    let style = { opacity };
+    if (component.transformY) {
+      style = Object.assign(style, {
+        transform: `translate3d(0px, ${component.transformY}px, 0px)`,
+      });
+    }
+
+    component.captionStyle = getStyles(style);
+  }
+
+  getOpacity(component) {
     const yScrollPosition = window.pageYOffset;
 
     if (component.isDesktop()) {
@@ -34,10 +52,11 @@ export default class SliderCaptionComponent extends Component {
         1 - ((yScrollPosition - tHeaderOffset) * 1.85) / parallaxElHeight;
 
       requestAnimationFrame(function () {
-        component.fade(component);
+        component.prepareStyle(component);
       });
     } else {
       component.opacity = 1;
     }
+    return component.opacity;
   }
 }

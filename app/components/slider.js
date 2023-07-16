@@ -3,12 +3,14 @@ import { service } from '@ember/service';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { isSuperset } from '../util/set';
+import getStyles from '../util/style';
 
 export default class SliderComponent extends Component {
   @service media;
   @service('-document') document;
 
   @tracked
+  sliderParallaxStyles;
   sliderParallaxYPos = 0;
 
   @tracked
@@ -57,5 +59,12 @@ export default class SliderComponent extends Component {
       component.sliderParallaxYPos = 0;
       component.captionParallaxYPos = 0;
     }
+    component.sliderParallaxStyles = getStyles({
+      transform: `translate3d(0px, ${component.sliderParallaxYPos}px, 0px)`,
+    });
+  }
+
+  get showVideo() {
+    return !(this.media.isDeviceXs | this.media.isDeviceSm);
   }
 }
