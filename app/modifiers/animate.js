@@ -6,7 +6,6 @@ export default modifier(function animate(element, [animation, speed], hash) {
     .forEach(
         (elementClass) => {
             if (elementClass.includes(prefix) && !elementClass.includes(`${prefix}animated`)) {
-                console.log(`Remove class ${elementClass}`)
                 element.classList.remove(elementClass);
             }
         }
