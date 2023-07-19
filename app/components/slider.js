@@ -7,6 +7,7 @@ import getStyles from '../util/style';
 
 export default class SliderComponent extends Component {
   @service media;
+  @service fastboot;
   @service('-document') document;
 
   @tracked
@@ -20,11 +21,13 @@ export default class SliderComponent extends Component {
   setup() {
     this.slider = this.document.querySelector('#slider');
     this.headerElement = this.document.querySelector('#header');
-    window.addEventListener(
-      'DOMContentLoaded',
-      () => this.sliderParallax(this),
-      false
-    );
+    if (!this.fastboot.isFastBoot) {
+      window.addEventListener(
+        'DOMContentLoaded',
+        () => this.sliderParallax(this),
+        false
+      );
+    }
   }
 
   isDesktop() {

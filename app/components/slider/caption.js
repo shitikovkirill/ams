@@ -7,6 +7,7 @@ import getStyles from '../../util/style';
 
 export default class SliderCaptionComponent extends Component {
   @service media;
+  @service fastboot;
   @service('-document') document;
 
   @tracked
@@ -16,11 +17,13 @@ export default class SliderCaptionComponent extends Component {
   @action
   setup() {
     this.slider = this.document.querySelector('.slider-parallax');
-    window.addEventListener(
-      'DOMContentLoaded',
-      () => this.prepareStyle(this),
-      false
-    );
+    if (!this.fastboot.isFastBoot) {
+      window.addEventListener(
+        'DOMContentLoaded',
+        () => this.prepareStyle(this),
+        false
+      );
+    }
   }
 
   isDesktop() {
