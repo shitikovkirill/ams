@@ -2,11 +2,10 @@ import Component from '@glimmer/component';
 import { service } from '@ember/service';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
-import { isSuperset } from '../../util/set';
 import getStyles from '../../util/style';
 
 export default class SliderCaptionComponent extends Component {
-  @service media;
+  @service device;
   @service fastboot;
   @service('-document') document;
 
@@ -26,12 +25,6 @@ export default class SliderCaptionComponent extends Component {
     }
   }
 
-  isDesktop() {
-    const hasMedia = new Set(this.media.matches);
-    const desktopMedia = new Set(['device-xl', 'device-lg']);
-    return isSuperset(desktopMedia, hasMedia);
-  }
-
   prepareStyle(component) {
     const opacity = component.getOpacity(component);
     let style = { opacity };
@@ -47,7 +40,7 @@ export default class SliderCaptionComponent extends Component {
   getOpacity(component) {
     const yScrollPosition = window.pageYOffset;
 
-    if (component.isDesktop()) {
+    if (component.device.isDesktop()) {
       const parallaxElHeight = component.slider.offsetHeight;
       const tHeaderOffset = 100;
 
