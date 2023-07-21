@@ -1,5 +1,11 @@
 {{head-layout}}
 
+<BreadcrumbsItem as |linkClass|>
+  <LinkTo @route="index" class={{linkClass}}>
+    Home
+  </LinkTo>
+</BreadcrumbsItem>
+
 {{!-- Document Wrapper
 ============================================= --}}
 <div id="wrapper" class="clearfix">
