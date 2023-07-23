@@ -1,3 +1,4 @@
+logo: "logo"
 locale:
   language: "Language"
   en-us: "English"
@@ -7,3 +8,14 @@ header:
   call: Call Us
   email: Email Us
   open: We'are Open
+page-title:
+    project: Project
+    description:
+      project: Page with a detailed description of the project and photos
+      contact: The page on which all contacts of the company are collected
+menu:
+    home: Company
+    projects: Projects
+    documents: Documents
+    contact: Contact
+    services: Services

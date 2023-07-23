@@ -24,13 +24,9 @@ export default class VideoComponent extends Component {
   }
 
   calculateSize(component) {
-    debugger;
-    console.log('setup video');
     const element = component.document.querySelector('.video-wrap:has(video)');
-    console.log(element);
     const divWidth = element.offsetWidth;
     const divHeight = element.offsetHeight;
-    console.log(divWidth, divHeight);
     let elWidth = (16 * divHeight) / 9;
     let elHeight = divHeight;
 

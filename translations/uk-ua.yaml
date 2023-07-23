@@ -1,3 +1,4 @@
+logo: "logo"
 locale:
   language: "Мова"
   en-us: "Англійська"
@@ -7,3 +8,14 @@ header:
   call: Телефонуйте нам
   email: Напишіть нам
   open: Ми відкриті
+page-title:
+    project: Проект
+    description:
+        project: Сторінка з детальним описом проекту та фото
+        contact: Сторінка, на якій зібрані всі контакти компанії
+menu:
+    home: Компанія
+    projects: Наші роботи
+    documents: Документи
+    contact: Контакти
+    services: Послуги

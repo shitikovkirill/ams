@@ -31,3 +31,14 @@
     position: absolute;
     height: 100%;
 }
+
+#page-title .breadcrumb .breadcrumb-item:last-child a{
+    color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.disabled-link {
+    cursor: not-allowed;
+}

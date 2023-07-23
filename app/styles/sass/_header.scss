@@ -491,11 +491,13 @@ only screen and (                min-resolution: 2dppx) {
 			border-top: 0;
 		}
 	}
-	&:hover,
-	&.current {
+	&:hover {
 		> .menu-link {
 			color: $primary-menu-active-color;
 		}
+	}
+	> .menu-link.active {
+		color: $primary-menu-active-color;
 	}
 	.sub-menu-trigger {
 		display: block;
