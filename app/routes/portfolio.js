@@ -6,7 +6,7 @@ export default class PortfolioRoute extends Route {
   @service intl;
 
   model({ portfolio_id }) {
-    const locale = this.intl.locale[0]
+    const locale = this.intl.locale[0];
     const item = data[locale].filter((item) => item.id == portfolio_id);
     return item[0];
   }

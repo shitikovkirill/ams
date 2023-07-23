@@ -6,7 +6,7 @@ export default class IndexRoute extends Route {
   @service intl;
 
   model() {
-    const locale = this.intl.locale[0]
+    const locale = this.intl.locale[0];
     return data[locale];
   }
 }
