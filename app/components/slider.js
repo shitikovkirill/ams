@@ -61,6 +61,6 @@ export default class SliderComponent extends Component {
   }
 
   get showVideo() {
-    return !this.device.isMobile();
+    return !this.device.isMobile;
   }
 }
