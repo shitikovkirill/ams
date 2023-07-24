@@ -16,7 +16,7 @@ export default class HeaderComponent extends Component {
   addScrollListener() {
     if (!this.fastboot.isFastBoot) {
       this.document.addEventListener('scroll', () => {
-        if (this.device.isDesktop() && window.scrollY >= this.topOffsetScroll) {
+        if (this.device.isDesktop && window.scrollY >= this.topOffsetScroll) {
           this.isSticky = true;
         } else {
           this.isSticky = false;
