@@ -10,7 +10,6 @@ export default class HeaderPrimaryNavigationComponent extends Component {
   @tracked
   open = false;
 
-
   @action toggleMenu() {
     this.open = !this.open;
   }
