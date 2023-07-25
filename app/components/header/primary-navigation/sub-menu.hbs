@@ -19,7 +19,7 @@
             {{/if}}
         </div>
     </a>    
-    <ul class="sub-menu-container" style={{if this.open  "" "display: none;"}}>
+    <ul class="sub-menu-container {{if this.open "" "hide-on-mobile"}}">
         {{#each @items as |item|}}
             <li class="menu-item">
                 <LinkTo class="menu-link" @route="portfolio" @model={{item.id}}>

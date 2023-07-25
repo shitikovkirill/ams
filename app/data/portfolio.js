@@ -401,7 +401,7 @@ const data = {
       ],
     },
   ],
-  'en-ua': [
+  'en-us': [
     {
       id: '1',
       image: '/ams/assets/images/projects/1.jpg',

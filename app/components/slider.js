@@ -35,7 +35,7 @@ export default class SliderComponent extends Component {
 
     const yScrollPosition = window.pageYOffset;
 
-    if (component.device.isDesktop()) {
+    if (component.device.isDesktop) {
       if (parallaxElHeight + parallaxOffsetTop + 50 > yScrollPosition) {
         if (yScrollPosition > parallaxOffsetTop) {
           component.sliderParallaxYPos =

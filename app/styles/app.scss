@@ -42,3 +42,9 @@
 .disabled-link {
     cursor: not-allowed;
 }
+
+@media (max-width: 991px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}

@@ -40,7 +40,7 @@ export default class SliderCaptionComponent extends Component {
   getOpacity(component) {
     const yScrollPosition = window.pageYOffset;
 
-    if (component.device.isDesktop()) {
+    if (component.device.isDesktop) {
       const parallaxElHeight = component.slider.offsetHeight;
       const tHeaderOffset = 100;
 

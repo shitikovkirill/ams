@@ -11,5 +11,5 @@ export default class PrimaryNavigationSubMenuComponent extends Component {
 
     @action toggleMenu() {
         this.open = !this.open;
-      }
+    }
 }
