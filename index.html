@@ -7,18 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     
-<meta name="ams/config/environment" content="%7B%22modulePrefix%22%3A%22ams%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2Fams%2F%22%2C%22locationType%22%3A%22history%22%2C%22EmberENV%22%3A%7B%22EXTEND_PROTOTYPES%22%3Afalse%2C%22FEATURES%22%3A%7B%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22ams%22%2C%22version%22%3A%220.0.0%2Bdba9261e%22%7D%2C%22googleFonts%22%3A%5B%22Source%2BSans%2BPro%3A300%2C400%2C600%2C700%22%2C%22Roboto%3A300%2C400%2C500%2C700%22%5D%2C%22contentSecurityPolicy%22%3A%7B%22font-src%22%3A%22'self'%20fonts.gstatic.com%22%2C%22style-src%22%3A%22'self'%20fonts.googleapis.com%22%7D%2C%22ember-body-class%22%3A%7B%22includeRouteName%22%3Afalse%7D%7D" />
+<meta name="ams/config/environment" content="%7B%22modulePrefix%22%3A%22ams%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2Fams%2F%22%2C%22locationType%22%3A%22history%22%2C%22EmberENV%22%3A%7B%22EXTEND_PROTOTYPES%22%3Afalse%2C%22FEATURES%22%3A%7B%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22ams%22%2C%22version%22%3A%220.0.0%2B3f58c50d%22%7D%2C%22googleFonts%22%3A%5B%22Source%2BSans%2BPro%3A300%2C400%2C600%2C700%22%2C%22Roboto%3A300%2C400%2C500%2C700%22%5D%2C%22contentSecurityPolicy%22%3A%7B%22font-src%22%3A%22'self'%20fonts.gstatic.com%22%2C%22style-src%22%3A%22'self'%20fonts.googleapis.com%22%7D%2C%22ember-body-class%22%3A%7B%22includeRouteName%22%3Afalse%7D%7D" />
 <!-- EMBER_CLI_FASTBOOT_TITLE -->  <meta name="ember-cli-head-start" content><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"><meta name="ember-cli-head-end" content>
 
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700" rel="stylesheet" type="text/css" media="all">
 
     <link integrity="" rel="stylesheet" href="/ams/assets/vendor-1a10c33235e1302ecb7a997be098f402.css">
-    <link integrity="" rel="stylesheet" href="/ams/assets/ams-62f2a149d51d594892e485c04afc331f.css">
+    <link integrity="" rel="stylesheet" href="/ams/assets/ams-7f53774240e5cf0771e9c10ca3da5bbc.css">
 
     
   </head>
   <body class="stretched ">
     <script type="x/boundary" id="fastboot-body-start"></script><!---->
+
+<!---->
 
 <div id="wrapper" class="clearfix">
 
@@ -82,8 +84,8 @@
         <div class="header-row">
 
             <div id="logo" class="ml-auto ml-lg-0 mr-lg-auto">
-    <a href="index.html" class="standard-logo"><img src="assets/images/logo-2d6ee0ff1f379699c0508c723c109f0f.png" alt="Canvas Logo"></a>
-    <a href="index.html" class="retina-logo"><img src="assets/images/logo@2x-9d84c2e4caca2e298f20030c833a5595.png" alt="Canvas Logo"></a>
+    <a id="ember3" class="ember-view active standard-logo" href="/ams/"><img src="/ams/assets/images/logo-2d6ee0ff1f379699c0508c723c109f0f.png" alt="logo"></a>
+    <a id="ember4" class="ember-view active retina-logo" href="/ams/"><img src="/ams/assets/images/logo@2x-9d84c2e4caca2e298f20030c833a5595.png" alt="logo"></a>
 </div>
 
             <div class="header-misc d-none d-lg-flex">
@@ -129,61 +131,95 @@
 
                 <div class="header-misc">
 
-                    <div id="top-search" class="header-misc-icon">
-                        <a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
-                    </div>
+    <div id="top-search" class="header-misc-icon">
+        <a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
+    </div>
 
-                </div>
+</div>
 
-                <div id="primary-menu-trigger">
-                    <svg class="svg-trigger" viewbox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
-                </div>
+<div id="primary-menu-trigger">
+    <svg class="svg-trigger" viewbox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+</div>
 
-                <nav class="primary-menu with-arrows">
+<nav class="primary-menu with-arrows">
 
     <ul class="menu-container">
-        <li class="menu-item current"><a class="menu-link" href="demo-construction.html"><div>Home</div></a></li>
         <li class="menu-item">
-            <a class="menu-link" href="demo-construction-services.html">
-                <div>What we do
-                    <i class="icon-angle-down"></i>
-                </div>
+            <a id="ember5" class="ember-view active menu-link" href="/ams/">
+                <div>Компанія</div>
             </a>
-            <ul class="sub-menu-container">
-                <li class="menu-item">
-                    <a class="menu-link" href="#">
-                        <div>Housing Management</div></a>
-                </li>
-                <li class="menu-item">
-                    <a class="menu-link" href="#">
-                        <div>Construction Planning</div>
-                    </a>
-                </li>
-                <li class="menu-item"><a class="menu-link" href="#"><div>Green Homes</div></a></li>
-                <li class="menu-item"><a class="menu-link" href="#"><div>Architecture Design</div></a></li>
-                <li class="menu-item"><a class="menu-link" href="#"><div>Interior Planning</div></a></li>
-            </ul>
         </li>
-        <li class="menu-item"><a class="menu-link" href="demo-construction-about-us.html"><div>About Us</div></a></li>
-        <li class="menu-item"><a class="menu-link" href="demo-construction-projects.html"><div>Projects<i class="icon-angle-down"></i></div></a>
-            <ul class="sub-menu-container">
-                <li class="menu-item"><a class="menu-link" href="demo-construction-projects-2.html"><div>2 Columns</div></a></li>
-                <li class="menu-item"><a class="menu-link" href="demo-construction-projects-3.html"><div>3 Columns</div></a></li>
-                <li class="menu-item"><a class="menu-link" href="demo-construction-projects.html"><div>4 Columns</div></a></li>
-                <li class="menu-item"><a class="menu-link" href="demo-construction-projects-5.html"><div>5 Columns</div></a></li>
-            </ul>
+        <li class="menu-item">
+            <a id="ember6" class="ember-view active menu-link" href="/ams/">
+                <div>Послуги</div>
+            </a>
         </li>
-        <li class="menu-item"><a class="menu-link" href="demo-construction-investors.html"><div>Investors</div></a></li>
-        <li class="menu-item"><a class="menu-link" href="demo-construction-blog.html"><div>News</div></a></li>
-        <li class="menu-item"><a class="menu-link" href="demo-construction-careers.html"><div>Careers</div></a></li>
-        <li class="menu-item"><a class="menu-link" href="demo-construction-contact.html"><div>Contact</div></a></li>
+        <li class="menu-item">
+    <a class="menu-link disabled-link" href="#">
+        <div>Наші роботи
+                <i class="icon-angle-down"></i>
+        </div>
+    </a>    
+    <ul class="sub-menu-container hide-on-mobile">
+            <li class="menu-item">
+                <a id="ember7" class="ember-view menu-link" href="/ams/portfolio/1">
+                    <div>AAA 1</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a id="ember8" class="ember-view menu-link" href="/ams/portfolio/2">
+                    <div>AAA</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a id="ember9" class="ember-view menu-link" href="/ams/portfolio/3">
+                    <div>AAA 2</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a id="ember10" class="ember-view menu-link" href="/ams/portfolio/4">
+                    <div>AAA4</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a id="ember11" class="ember-view menu-link" href="/ams/portfolio/5">
+                    <div>AAA5</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a id="ember12" class="ember-view menu-link" href="/ams/portfolio/6">
+                    <div>AAA6</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a id="ember13" class="ember-view menu-link" href="/ams/portfolio/7">
+                    <div>AAA7</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a id="ember14" class="ember-view menu-link" href="/ams/portfolio/8">
+                    <div>AAA8</div>
+                </a>
+            </li>
+    </ul>
+</li>
+        <li class="menu-item">
+            <a id="ember15" class="ember-view menu-link" href="/ams/documents">
+                <div>Документи</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a id="ember16" class="ember-view menu-link" href="/ams/contact">
+                <div>Контакти</div>
+            </a>
+        </li>
     </ul>
 
 </nav>
 
-                <form class="top-search-form" action="search.html" method="get">
-                    <input name="q" class="form-control" value placeholder="Type &amp; Hit Enter.." autocomplete="off" type="text">
-                </form>
+<form class="top-search-form" action="search.html" method="get">
+    <input name="q" class="form-control" value placeholder="Type &amp; Hit Enter.." autocomplete="off" type="text">
+</form>
 
             </div>
         </div>
@@ -229,13 +265,7 @@
     </div>
 </div>
                 </div>
-                    <div class="video-wrap">
-    <video id="slide-video" poster="assets/images/videos/1-21240afabfac3775484ba497804a8881.jpg" preload="auto" loop autoplay muted>
-        <source src="assets/images/videos/1.webm" type="video/webm">
-        <source src="assets/images/videos/1.mp4" type="video/mp4">
-    </video>
-    <div class="video-overlay" style="background-color: rgba(0,0,0,0.1);"></div>
-</div>
+                    <div class="video-placeholder" style="background-image: url(assets/images/videos/1-21240afabfac3775484ba497804a8881.jpg);"></div>
     
 </div>
     <div class="carousel-item     ">
@@ -336,10 +366,10 @@
       <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="grid-inner">
             <div class="portfolio-image">
-                <img src="assets/images/projects/1-3d2bac646f09966bfee1cfb2350e4227.jpg" alt="The Atmosphere">
+                <img src="/ams/assets/images/projects/1-3d2bac646f09966bfee1cfb2350e4227.jpg" alt="The Atmosphere">
                 <div class="bg-overlay">
                     <div class="bg-overlay-content dark">
-                        <a id="ember6" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/1">
+                        <a id="ember20" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/1">
                             <i class="icon-line-ellipsis"></i>
                         </a>
                     </div>
@@ -349,7 +379,29 @@
 
             <div class="portfolio-desc">
                 <h3>
-                    <a id="ember7" class="ember-view" href="/ams/portfolio/1">AAA</a>
+                    <a id="ember21" class="ember-view" href="/ams/portfolio/1">AAA 1</a>
+                </h3>
+                <span>xxx 1</span>
+            </div>
+        </div>
+    </article>
+      <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="grid-inner">
+            <div class="portfolio-image">
+                <img src="/ams/assets/images/projects/2-5bd02f37523922200b967487e848f928.jpg" alt="The Atmosphere">
+                <div class="bg-overlay">
+                    <div class="bg-overlay-content dark">
+                        <a id="ember22" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/2">
+                            <i class="icon-line-ellipsis"></i>
+                        </a>
+                    </div>
+                    <div class="bg-overlay-bg dark"></div>
+                </div>
+            </div>
+
+            <div class="portfolio-desc">
+                <h3>
+                    <a id="ember23" class="ember-view" href="/ams/portfolio/2">AAA</a>
                 </h3>
                 <span>xxx</span>
             </div>
@@ -358,10 +410,10 @@
       <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="grid-inner">
             <div class="portfolio-image">
-                <img src="assets/images/projects/2-5bd02f37523922200b967487e848f928.jpg" alt="The Atmosphere">
+                <img src="/ams/assets/images/projects/3-94d18748677b80524dfba331b2281b10.jpg" alt="The Atmosphere">
                 <div class="bg-overlay">
                     <div class="bg-overlay-content dark">
-                        <a id="ember8" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/2">
+                        <a id="ember24" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/3">
                             <i class="icon-line-ellipsis"></i>
                         </a>
                     </div>
@@ -371,19 +423,19 @@
 
             <div class="portfolio-desc">
                 <h3>
-                    <a id="ember9" class="ember-view" href="/ams/portfolio/2">AAA</a>
+                    <a id="ember25" class="ember-view" href="/ams/portfolio/3">AAA 2</a>
                 </h3>
-                <span>xxx</span>
+                <span>xxx2</span>
             </div>
         </div>
     </article>
       <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="grid-inner">
             <div class="portfolio-image">
-                <img src="assets/images/projects/3-94d18748677b80524dfba331b2281b10.jpg" alt="The Atmosphere">
+                <img src="/ams/assets/images/projects/4-60947721f6f98c8bf196431666bc6945.jpg" alt="The Atmosphere">
                 <div class="bg-overlay">
                     <div class="bg-overlay-content dark">
-                        <a id="ember10" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/3">
+                        <a id="ember26" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/4">
                             <i class="icon-line-ellipsis"></i>
                         </a>
                     </div>
@@ -393,19 +445,19 @@
 
             <div class="portfolio-desc">
                 <h3>
-                    <a id="ember11" class="ember-view" href="/ams/portfolio/3">AAA</a>
+                    <a id="ember27" class="ember-view" href="/ams/portfolio/4">AAA4</a>
                 </h3>
-                <span>xxx</span>
+                <span>xxx4</span>
             </div>
         </div>
     </article>
       <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="grid-inner">
             <div class="portfolio-image">
-                <img src="assets/images/projects/4-60947721f6f98c8bf196431666bc6945.jpg" alt="The Atmosphere">
+                <img src="/ams/assets/images/projects/5-c225c930a8a71d10901691ffb8d725d8.jpg" alt="The Atmosphere">
                 <div class="bg-overlay">
                     <div class="bg-overlay-content dark">
-                        <a id="ember12" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/4">
+                        <a id="ember28" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/5">
                             <i class="icon-line-ellipsis"></i>
                         </a>
                     </div>
@@ -415,19 +467,19 @@
 
             <div class="portfolio-desc">
                 <h3>
-                    <a id="ember13" class="ember-view" href="/ams/portfolio/4">AAA</a>
+                    <a id="ember29" class="ember-view" href="/ams/portfolio/5">AAA5</a>
                 </h3>
-                <span>xxx</span>
+                <span>xxx5</span>
             </div>
         </div>
     </article>
       <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="grid-inner">
             <div class="portfolio-image">
-                <img src="assets/images/projects/5-c225c930a8a71d10901691ffb8d725d8.jpg" alt="The Atmosphere">
+                <img src="/ams/assets/images/projects/6-5aba56b53df2f769f5721787e91b77fe.jpg" alt="The Atmosphere">
                 <div class="bg-overlay">
                     <div class="bg-overlay-content dark">
-                        <a id="ember14" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/5">
+                        <a id="ember30" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/6">
                             <i class="icon-line-ellipsis"></i>
                         </a>
                     </div>
@@ -437,19 +489,19 @@
 
             <div class="portfolio-desc">
                 <h3>
-                    <a id="ember15" class="ember-view" href="/ams/portfolio/5">AAA</a>
+                    <a id="ember31" class="ember-view" href="/ams/portfolio/6">AAA6</a>
                 </h3>
-                <span>xxx</span>
+                <span>xxx6</span>
             </div>
         </div>
     </article>
       <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="grid-inner">
             <div class="portfolio-image">
-                <img src="assets/images/projects/6-5aba56b53df2f769f5721787e91b77fe.jpg" alt="The Atmosphere">
+                <img src="/ams/assets/images/projects/7-8cfee8d4758e7f0f901328867daf200f.jpg" alt="The Atmosphere">
                 <div class="bg-overlay">
                     <div class="bg-overlay-content dark">
-                        <a id="ember16" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/6">
+                        <a id="ember32" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/7">
                             <i class="icon-line-ellipsis"></i>
                         </a>
                     </div>
@@ -459,19 +511,19 @@
 
             <div class="portfolio-desc">
                 <h3>
-                    <a id="ember17" class="ember-view" href="/ams/portfolio/6">AAA</a>
+                    <a id="ember33" class="ember-view" href="/ams/portfolio/7">AAA7</a>
                 </h3>
-                <span>xxx</span>
+                <span>xxx7</span>
             </div>
         </div>
     </article>
       <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="grid-inner">
             <div class="portfolio-image">
-                <img src="assets/images/projects/7-8cfee8d4758e7f0f901328867daf200f.jpg" alt="The Atmosphere">
+                <img src="/ams/assets/images/projects/8-e82aa9657d3e54c92f8e66c9992b8c16.jpg" alt="The Atmosphere">
                 <div class="bg-overlay">
                     <div class="bg-overlay-content dark">
-                        <a id="ember18" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/7">
+                        <a id="ember34" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/8">
                             <i class="icon-line-ellipsis"></i>
                         </a>
                     </div>
@@ -481,31 +533,9 @@
 
             <div class="portfolio-desc">
                 <h3>
-                    <a id="ember19" class="ember-view" href="/ams/portfolio/7">AAA</a>
+                    <a id="ember35" class="ember-view" href="/ams/portfolio/8">AAA8</a>
                 </h3>
-                <span>xxx</span>
-            </div>
-        </div>
-    </article>
-      <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="grid-inner">
-            <div class="portfolio-image">
-                <img src="assets/images/projects/8-e82aa9657d3e54c92f8e66c9992b8c16.jpg" alt="The Atmosphere">
-                <div class="bg-overlay">
-                    <div class="bg-overlay-content dark">
-                        <a id="ember20" class="ember-view overlay-trigger-icon bg-light text-dark" href="/ams/portfolio/8">
-                            <i class="icon-line-ellipsis"></i>
-                        </a>
-                    </div>
-                    <div class="bg-overlay-bg dark"></div>
-                </div>
-            </div>
-
-            <div class="portfolio-desc">
-                <h3>
-                    <a id="ember21" class="ember-view" href="/ams/portfolio/8">AAA</a>
-                </h3>
-                <span>xxx</span>
+                <span>xxx8</span>
             </div>
         </div>
     </article>
@@ -541,7 +571,7 @@
 		</div>
 	</section>
 
-	<footer id="footer" class="dark">
+		<footer id="footer" class="dark">
 		<div class="container">
 
 			<div class="footer-widgets-wrap">
@@ -550,7 +580,7 @@
 					<div class="col-lg-9">
 						<div class="widget clearfix">
 
-							<img src="assets/images/footer-widget-logo-032eaec81a90892c3d06145e63f9ec6c.png" alt="Image" class="alignleft" style="margin-top: 8px; padding-right: 18px; border-right: 1px solid #4A4A4A;">
+							<img src="/ams/assets/images/footer-widget-logo-032eaec81a90892c3d06145e63f9ec6c.png" alt="Image" class="alignleft" style="margin-top: 8px; padding-right: 18px; border-right: 1px solid #4A4A4A;">
 
 							<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards with a Retina &amp; Responsive Approach. Browse the amazing Features this template offers.</p>
 
@@ -659,7 +689,7 @@
 
 					<div class="col-12 col-md-auto text-center text-md-right">
 						<div class="copyrights-menu copyright-links clearfix">
-							<a href="#">Home</a>/<a href="#">About Us</a>/<a href="#">Team</a>/<a href="#">Clients</a>/<a href="#">FAQs</a>/<a href="#">Contact</a>
+							<a id="ember36" class="ember-view active" href="/ams/">Home</a>/<a href="#">About Us</a>/<a href="#">Team</a>/<a href="#">Clients</a>/<a href="#">FAQs</a>/<a href="#">Contact</a>
 						</div>
 					</div>
 				</div>
@@ -672,10 +702,10 @@
 
 <div id="gotoTop" class="icon-angle-up"></div><script type="x/boundary" id="fastboot-body-end"></script>
 
-    <script src="/ams/assets/vendor-140ea36f1f6c76b1ddcd56438130bdef.js"></script>
+    <script src="/ams/assets/vendor-f1ad56041cbf307af809a01f1455da81.js"></script>
 <script src="/ams/assets/chunk.751.328dccaba67e09619627.js"></script>
-<script src="/ams/assets/chunk.143.4ce1856dfdc739554f69.js"></script>
-    <script src="/ams/assets/ams-7198c8e6aa03fea71911920aa9ec5e06.js"></script>
+<script src="/ams/assets/chunk.143.d2e3ab86c6c9e135c3b4.js"></script>
+    <script src="/ams/assets/ams-b240a063a4d5355d5b078de1813657ba.js"></script>
 
     <div id="ember-bootstrap-wormhole"></div>
   </body>
