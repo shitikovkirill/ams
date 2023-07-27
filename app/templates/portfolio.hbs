@@ -16,11 +16,10 @@
 					<h2 class="center ls1 bottommargin">{{@model.name}}</h2>
 
 					<p>{{@model.description}}</p>
-
 					
-
+				<PhotoSwipe @items={{@model.images}} as |photoSwipe|>
 					<div id="portfolio" class="portfolio row grid-container gutter-20 has-init-isotope" data-layout="fitRows">
-						<PhotoSwipe @items={{@model.images}} as |photoSwipe|>
+						
 							{{#each @model.images as |image index|}}
 								<article class="portfolio-item col-12 col-sm-6 col-md-4 pf-media pf-icons">
 									<div class="grid-inner">
@@ -41,9 +40,8 @@
 									</div>
 								</article>
 							{{/each}}
-						</PhotoSwipe>
 					</div>
-
+				</PhotoSwipe>
 				</div>
 
 			</div>
