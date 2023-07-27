@@ -17,23 +17,31 @@
 
 					<p>{{@model.description}}</p>
 
+					
+
 					<div id="portfolio" class="portfolio row grid-container gutter-20 has-init-isotope" data-layout="fitRows">
-
-						{{#each @model.images as |image|}}
-							<article class="portfolio-item col-12 col-sm-6 col-md-4 pf-media pf-icons">
-								<div class="grid-inner">
-									<div class="portfolio-image">
-										<img src={{image.url}} alt="The Atmosphere">
+						<PhotoSwipe @items={{@model.images}} as |photoSwipe|>
+							{{#each @model.images as |image index|}}
+								<article class="portfolio-item col-12 col-sm-6 col-md-4 pf-media pf-icons">
+									<div class="grid-inner">
+										<div class="portfolio-image">
+											<img
+											src={{image.src}}
+											alt="The Atmosphere"
+											{{on 'click' (fn photoSwipe.actions.open (hash index=index))}}>
+										</div>
+										<div class="portfolio-desc">
+											{{#if image.title }}
+											 <h3>{{image.title}}</h3>
+											 {{/if}}
+											 {{#if image.description }}
+											<span>{{image.description}}</span>
+											{{/if}}
+										</div>
 									</div>
-									<div class="portfolio-desc">
-										<h3>{{image.title}}</h3>
-										<span>{{image.description}}</span>
-									</div>
-								</div>
-							</article>
-						{{/each}}
-						
-
+								</article>
+							{{/each}}
+						</PhotoSwipe>
 					</div>
 
 				</div>
