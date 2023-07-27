@@ -11,4 +11,5 @@ Router.map(function () {
   this.route('not-found', { path: '/*path' });
   this.route('documents');
   this.route('contact');
+  this.route('services');
 });
