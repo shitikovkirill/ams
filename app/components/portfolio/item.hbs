@@ -5,7 +5,7 @@
             {{on "mouseenter" (fn this.changeFade "In")}}
             {{on "mouseleave" (fn this.changeFade "Out")}}
             >
-                <img src={{@item.image}} alt={{@item.alt}}>
+                <img src={{@item.image}} alt={{@item.name}}>
                 <div class="bg-overlay">
                     <div class="bg-overlay-content dark" {{animate this.animation}}>
                         <LinkTo class="overlay-trigger-icon bg-light text-dark" @route="portfolio" @model={{@item.id}}>

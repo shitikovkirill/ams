@@ -26,7 +26,7 @@ module.exports = function (defaults) {
             'assets/images/projects/milking-complex/**/*',
             'assets/images/projects/kolo/**/*',
           ],
-          widths: [600],
+          widths: [357, 1024],
         },
       ],
     },
