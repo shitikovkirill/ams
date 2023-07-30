@@ -8,6 +8,10 @@ module.exports = function (defaults) {
       urls: ['/'],
     },
 
+    fingerprint: {
+      exclude: ['assets/images/'],
+    },
+
     'ember-bootstrap': {
       bootstrapVersion: 4,
       importBootstrapCSS: false,
@@ -27,6 +31,7 @@ module.exports = function (defaults) {
             'assets/images/projects/kolo/**/*',
           ],
           widths: [357, 1024],
+          removeSource: true,
         },
       ],
     },
