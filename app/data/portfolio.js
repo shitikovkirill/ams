@@ -37,7 +37,7 @@ const data = {
           src: '/ams/assets/images/projects/barn/51024w.jpg',
           srcSmall: '/ams/assets/images/projects/barn/5357w.jpg',
           w: 1024,
-          h: 768,
+          h: 461,
         },
       ],
     },

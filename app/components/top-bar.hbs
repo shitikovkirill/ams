@@ -23,7 +23,11 @@
                 <div class="top-links">
                     <ul class="top-links-container">
                         <Header::LocaleSwitcher/>
-                        <li class="top-links-item"><a href="contact.html">{{t "header.contact"}}</a></li>
+                        <li class="top-links-item">
+                            <LinkTo @route="contact">
+                                {{ t 'menu.contact' }}
+                            </LinkTo>
+                        </li>
                     </ul>
                 </div>{{!-- .top-links end --}}
 
